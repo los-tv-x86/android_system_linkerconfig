@@ -90,6 +90,11 @@ Namespace BuildSystemDefaultNamespace([[maybe_unused]] const Context& ctx) {
 
   ns.AddSearchPath("/system/${LIB}");
   ns.AddSearchPath(system_ext + "/${LIB}");
+  // x86: non-treblized build paths
+  ns.AddSearchPath(product + "/${LIB}");
+  ns.AddSearchPath("/vendor/${LIB}");
+  ns.AddSearchPath("/vendor/${LIB}/hw");
+  ns.AddSearchPath("/odm/${LIB}");
 
   SetupSystemPermittedPaths(&ns);
 
