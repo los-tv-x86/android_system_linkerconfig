@@ -93,6 +93,8 @@ Namespace BuildSystemDefaultNamespace([[maybe_unused]] const Context& ctx) {
   // x86: non-treblized build paths
   ns.AddSearchPath(product + "/${LIB}");
   ns.AddSearchPath("/vendor/${LIB}");
+  ns.AddSearchPath("/system/vendor/${LIB}/egl");
+  ns.AddSearchPath("/vendor/${LIB}/egl");
   ns.AddSearchPath("/vendor/${LIB}/hw");
   ns.AddSearchPath("/odm/${LIB}");
 
